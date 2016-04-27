@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="joinus.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+	<script src="js/Game.js"></script>
+</head>
+
+<body>
+	<div class="nav-bar" style="display:flex;align-items:center;height:70px;">
+		<li><div class="logo"></div></li>
+		<li><p>Play Like A Girl</p></li>	
+	</div>
+
+	<h3>What kind of game do you want to start?</h3>
+
+	<div class="content-container">
+		<div class="icon-row">
+			<div class="icon"><img src="assets/Basketball.png" id="Basketball" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Rockclimbing.png" id="Rockclimbing" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Volleyball.png" id="Volleyball" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Hiking.png" id="Hiking" onclick="reply_click(this, this.id)"></div>
+		</div>
+		<div class="icon-row">
+			<div class="icon"><img src="assets/Boarding.png" id="Boarding" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Tennis.png" id="Tennis" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Running.png" id="Running" onclick="reply_click(this, this.id)"></div>
+			<div class="icon"><img src="assets/Soccer.png" id="Soccer" onclick="reply_click(this, this.id)"></div>
+		</div>
+		<a href="finishnewgame.html"><div class="bottom-button" style="text-align:center;line-height:50px;width:150px;height:50px;"><p>NEXT</p></div></a>
+	</div>
+	<script type="text/javascript">
+     Parse.initialize("sRLbnydTQeK22Vuwtduri11cTKYgteCs1IJDFGTM", "hi9NPEa6jobeRyQkXohCS8vAoCu5U0MRD3TwdMIH");
+    </script>
+</body>
+
+</html>

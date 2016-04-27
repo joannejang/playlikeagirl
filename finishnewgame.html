@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="joinus.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<script src="js/Game.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+</head>
+
+<body onload="getSportName()" onclick="getLocation()">
+	<div class="nav-bar" style="display:flex;align-items:center;height:70px;">
+		<li><div class="logo"></div></li>
+		<li><p>Play Like A Girl</p></li>
+	</div>
+
+	<h3>When and where?</h3>
+
+	<div class="content-container">
+		<br>
+		<br>
+		<br>
+		<form action="">
+			<label for="start-times">START TIME</label>
+			<select name="start-times" id="start-times" onchange="getTime()">
+				<option selected="selected" disabled="disabled">----</option>
+				<option value="4:00">4:00</option>
+				<option value="4:15">4:15</option>
+				<option value="4:30">4:30</option>
+				<option value="4:45">4:45</option>
+				<option value="5:00">5:00</option>
+				<option value="5:15">5:15</option>
+				<option value="5:30">5:30</option>
+				<option value="5:45">5:45</option>
+				<option value="6:00">6:00</option>
+				<option value="6:15">6:15</option>
+				<option value="6:30">6:30</option>
+				<option value="6:45">6:45</option>
+				<option value="7:00">7:00</option>
+				<option value="7:15">7:15</option>
+				<option value="7:30">7:30</option>
+				<option value="7:45">7:45</option>
+			</select>
+			<br>
+			<label for="am">AM</label>
+			<input type="radio" name="am" id="am" value="AM"><br>
+			<label for="pm">PM</label>
+			<input type="radio" name="am" id="pm" value="PM"><br>
+			<br>
+			<br>
+			<label for="locationField">LOCATION</label>
+			<div id="locationField">
+				<input type="autocomplete" name="autocomplete" id="autocomplete" onkeyup="getLocation()" onchange="getLocation()">
+			</div>
+			<br>
+			<br>
+			<label>SUMMARY</label>
+			<p id="sport" class="summary">Sport</p>
+			<p id="time" class="summary">Time</p>
+			<p id="geolocation" class="summary">Location</p>
+
+			<input type="submit" value="CREATE GAME" id="submit" onclick="createGame()">
+		</form>
+	</div>
+	<script type="text/javascript">
+     Parse.initialize("sRLbnydTQeK22Vuwtduri11cTKYgteCs1IJDFGTM", "hi9NPEa6jobeRyQkXohCS8vAoCu5U0MRD3TwdMIH");
+    </script>
+</body>
+</html>
